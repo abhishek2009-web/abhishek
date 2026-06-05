@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abhishek Animation</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 60px;
+      animation: glow 2s infinite alternate, move 5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+        color: #fff;
+      }
+      to {
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+        color: #ff0;
+      }
+    }
+
+    @keyframes move {
+      from {
+        transform: scale(1) rotate(0deg);
+      }
+      to {
+        transform: scale(1.2) rotate(5deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Abhishek</h1>
+</body>
+</html>
