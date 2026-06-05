@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maths Hub - Class 11 & 12</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #2c3e50; color: white; padding: 15px; text-align: center; }
+    nav { background: #34495e; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; }
+    section { padding: 20px; }
+    .solver, .simulation { background: white; padding: 15px; margin: 20px 0; border-radius: 8px; }
+    input, button { padding: 8px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mathematics Hub (Class 11 & 12)</h1>
+    <p>Learn • Practice • Simulate</p>
+  </header>
+
+  <nav>
+    <a href="#algebra">Algebra</a>
+    <a href="#calculus">Calculus</a>
+    <a href="#trigonometry">Trigonometry</a>
+    <a href="#simulations">Simulations</a>
+    <a href="#solver">Numerical Solver</a>
+  </nav>
+
+  <section id="algebra">
+    <h2>Algebra</h2>
+    <p>Notes, formulas, and practice problems for Class 11 & 12 Algebra.</p>
+  </section>
+
+  <section id="calculus">
+    <h2>Calculus</h2>
+    <p>Limits, derivatives, integrals explained with examples.</p>
+  </section>
+
+  <section id="trigonometry">
+    <h2>Trigonometry</h2>
+    <p>Identities, graphs, and problem sets.</p>
+  </section>
+
+  <section id="simulations" class="simulation">
+    <h2>Interactive Simulation</h2>
+    <p>Move the slider to see how a quadratic graph changes:</p>
+    <input type="range" id="a" min="-5" max="5" value="1" step="0.1">
+    <canvas id="graph" width="400" height="200" style="border:1px solid #ccc;"></canvas>
+  </section>
+
+  <section id="solver" class="solver">
+    <h2>Numerical Solver</h2>
+    <p>Solve quadratic equations (ax² + bx + c = 0):</p>
+    <input type="number" id="qa" placeholder="a">
+    <input type="number" id="qb" placeholder="b">
+    <input type="number" id="qc" placeholder="c">
+    <button onclick="solveQuadratic()">Solve</button>
+    <p id="solution"></p>
+  </section>
+
+  <script>
+    // Quadratic Solver
+    function solveQuadratic() {
+      let a = parseFloat(document.getElementById('qa').value);
+      let b = parseFloat(document.getElementById('qb').value);
+      let c = parseFloat(document.getElementById('qc').value);
+      let d = b*b - 4*a*c;
+      let sol = "";
+      if (d > 0) {
+        let x1 = (-b + Math.sqrt(d)) / (2*a);
+        let x2 = (-b - Math.sqrt(d)) / (2*a);
+        sol = `Two real roots: x1 = ${x1}, x2 = ${x2}`;
+      } else if (d === 0) {
+        let x = -b / (2*a);
+        sol = `One real root: x = ${x}`;
+      } else {
+        sol = "No real roots (complex solutions)";
+      }
+      document.getElementById('solution').innerText = sol;
+    }
+
+    // Quadratic Simulation
+    const canvas = document.getElementById('graph');
+    const ctx = canvas.getContext('2d');
+    const slider = document.getElementById('a');
+
+    function drawGraph(a) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath();
+      ctx.moveTo(0, canvas.height/2);
+      for (let x = -200; x <= 200; x++) {
+        let y = a * (x/40) * (x/40); // y = ax²
+        ctx.lineTo(x+200, canvas.height/2 - y*20);
+      }
+      ctx.strokeStyle = "blue";
+      ctx.stroke();
+    }
+
+    slider.addEventListener('input', () => drawGraph(slider.value));
+    drawGraph(slider.value);
+  </script>
+</body>
+</html>
