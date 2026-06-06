@@ -2,53 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Abhishek Animation</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
-
-    h1 {
-      font-size: 60px;
-      animation: glow 2s infinite alternate, move 5s infinite alternate;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-        color: #fff;
-      }
-      to {
-        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
-        color: #ff0;
-      }
-    }
-
-    @keyframes move {
-      from {
-        transform: scale(1) rotate(0deg);
-      }
-      to {
-        transform: scale(1.2) rotate(5deg);
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Abhishek</h1>
-<nav>
-  <a href="algebra.html">Algebra</a>
-  <a href="calculus.html">Calculus</a>
-  <a href="trigonometry.html">Trigonometry</a>
-  <a href="simulations.html">Simulations</a>
-  <a href="solver.html">Numerical Solver</a>
-</nav>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <h1 class="logo">Abhishek</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Welcome to My Portfolio</h2>
+      <p>I’m Abhishek — beginner developer learning coding, SEO writing, and freelancing.</p>
+      <a href="projects.html" class="btn">See My Projects</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Abhishek | Built with ❤️ using HTML, CSS & JS</p>
+  </footer>
 </body>
 </html>
