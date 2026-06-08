@@ -3,34 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhishek | Portfolio</title>
+  <meta name="description" content="Abhishek – Beginner developer, SEO writer, freelancer & JEE aspirant. Check out my projects and study materials.">
+  <title>Abhishek | Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <h1 class="logo">Abhishek</h1>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-text">
-      <h2>Welcome to My Portfolio</h2>
-      <p>I’m Abhishek — beginner developer learning coding, SEO writing, and freelancing.</p>
-      <a href="projects.html" class="btn">See My Projects</a>
+<!-- NAV -->
+<header>
+  <nav>
+    <h1 class="logo">Abhi<span>.</span></h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="seo-blog.html">Blog</a></li>
+      <li><a href="math-solver.html">Math Tool</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="page-content">
+
+  <!-- HERO -->
+  <section class="hero" id="home" style="position:relative; overflow:hidden;">
+    <canvas id="hero-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="hero-badge">Available for Freelance Work</div>
+      <h1 class="hero-title">
+        Hi, I'm <span class="highlight">Abhishek</span><br>
+        I'm a <span id="typed-text" style="color:var(--accent);border-right:2px solid var(--accent);padding-right:4px;"></span>
+      </h1>
+      <p class="hero-sub">Beginner developer learning HTML, CSS, JS, SEO writing, freelancing — and also grinding for JEE. Building cool things one line at a time.</p>
+      <div class="hero-btns">
+        <a href="projects.html" class="btn btn-primary">See My Projects →</a>
+        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2026 Abhishek | Built with ❤️ using HTML, CSS & JS</p>
-  </footer>
+  <!-- STATS -->
+  <section style="padding:3rem 2rem; border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="grid-4">
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="5" data-suffix="+">0+</span>
+          <p class="stat-label">Projects Built</p>
+        </div>
+        <div class="stat-card reveal delay-1">
+          <span class="stat-number" data-target="10" data-suffix="+">0+</span>
+          <p class="stat-label">Blog Articles</p>
+        </div>
+        <div class="stat-card reveal delay-2">
+          <span class="stat-number" data-target="2">0</span>
+          <p class="stat-label">Years Learning</p>
+        </div>
+        <div class="stat-card reveal delay-3">
+          <span class="stat-number" data-target="100" data-suffix="%">0%</span>
+          <p class="stat-label">Dedication</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK INTRO -->
+  <section>
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+        <div class="reveal">
+          <p class="section-label">About Me</p>
+          <h2 class="section-title">Coding, Writing &amp; Studying</h2>
+          <p style="margin-bottom:1.25rem;">I'm a Class 12 student passionate about technology, writing, and entrepreneurship. I build web projects to sharpen my coding skills while preparing for JEE.</p>
+          <p style="margin-bottom:2rem;">I believe the best way to learn is by building real things — this portfolio is proof of that journey.</p>
+          <a href="about.html" class="btn btn-outline">More About Me →</a>
+        </div>
+        <div class="reveal delay-2">
+          <div class="card">
+            <p class="section-label" style="margin-bottom:0.75rem;">What I'm Working On</p>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;">
+              <div style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem;background:var(--bg3);border-radius:8px;">
+                <span style="font-size:1.3rem;">🌐</span>
+                <div><strong style="font-size:0.95rem;color:var(--white);">This Portfolio Website</strong><p style="font-size:0.82rem;margin:0;">HTML, CSS, JavaScript</p></div>
+                <span class="tag tag-green" style="margin-left:auto;">Live</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem;background:var(--bg3);border-radius:8px;">
+                <span style="font-size:1.3rem;">📐</span>
+                <div><strong style="font-size:0.95rem;color:var(--white);">Math Solver Tool</strong><p style="font-size:0.82rem;margin:0;">JavaScript Calculator</p></div>
+                <span class="tag" style="margin-left:auto;">New</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem;background:var(--bg3);border-radius:8px;">
+                <span style="font-size:1.3rem;">📚</span>
+                <div><strong style="font-size:0.95rem;color:var(--white);">JEE Study Notes</strong><p style="font-size:0.82rem;margin:0;">Class 11 & 12 Material</p></div>
+                <span class="tag tag-pink" style="margin-left:auto;">WIP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS PREVIEW -->
+  <section style="background:var(--bg2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <p class="section-label">Skills</p>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="grid-4">
+        <div class="card reveal" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem;">🌐</div>
+          <strong style="color:var(--white);">HTML5</strong>
+          <p style="font-size:0.85rem;margin-top:0.25rem;">Semantic markup</p>
+        </div>
+        <div class="card reveal delay-1" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem;">🎨</div>
+          <strong style="color:var(--white);">CSS3</strong>
+          <p style="font-size:0.85rem;margin-top:0.25rem;">Flexbox, Grid, Animations</p>
+        </div>
+        <div class="card reveal delay-2" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem;">⚡</div>
+          <strong style="color:var(--white);">JavaScript</strong>
+          <p style="font-size:0.85rem;margin-top:0.25rem;">DOM, ES6+</p>
+        </div>
+        <div class="card reveal delay-3" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem;">🔍</div>
+          <strong style="color:var(--white);">SEO Writing</strong>
+          <p style="font-size:0.85rem;margin-top:0.25rem;">Content & Keywords</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="text-align:center;">
+    <div class="container">
+      <div class="card reveal" style="max-width:600px;margin:0 auto;padding:3rem;">
+        <p class="section-label" style="display:block;margin-bottom:1rem;">Study Material</p>
+        <h2 style="color:var(--white);margin-bottom:1rem;">Class 11 &amp; 12 + JEE Notes</h2>
+        <p style="margin-bottom:2rem;">Free study material for Physics, Chemistry, and Maths — organized chapter-wise for CBSE &amp; JEE preparation.</p>
+        <a href="portfolio.html" class="btn btn-primary">Access Study Material →</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <strong>Abhishek</strong> — Built with ❤️ using HTML, CSS &amp; JS &nbsp;|&nbsp; <a href="contact.html">Contact Me</a></p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
